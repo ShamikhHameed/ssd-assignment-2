@@ -1,0 +1,612 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.Sidebar {
+  height: 100vh;
+  width: 15vw;
+  padding-top: 7.3%;
+  background-color: #192435;
+  position: fixed;
+  box-shadow: 10px 5px 8px -9px rgba(0, 0, 0, 0.75);
+}
+
+.SidebarList {
+  height: auto;
+  padding: 0;
+  padding-top: 50px;
+  width: 100%;
+}
+
+.Sidebar .row {
+  width: 100%;
+  height: 50px;
+  list-style-type: none;
+  margin: 0%;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.row #icon {
+  flex: 30%;
+  display: grid;
+  padding-left: 30px;
+  place-items: center;
+  font-size: xx-large;
+}
+
+.row #title {
+  flex: 40%;
+  font-weight: 600;
+  padding-left: 15px;
+}
+
+.row #arrowIcon {
+  flex: 30%;
+  display: grid;
+  padding-left: 30px;
+  place-items: center;
+  font-size: xx-large;
+}
+
+.Header {
+  background-color: #192435;
+  position: fixed;
+  right: 0;
+  text-align: right;
+  height: 15%;
+  width: 100%;
+  /* box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.75); */
+}
+
+.HeaderRight {
+  float: right;
+  position: relative;
+  padding: 10px 25px;
+  text-align: center;
+  color: white;
+  display: block;
+}
+
+.HeaderLeft {
+  float: left;
+  text-align: left;
+  position: relative;
+  padding-top: 1%;
+  padding-left: 1.5%;
+  color: white;
+  display: block;
+}
+
+.HeaderRight > p {
+  margin-bottom: 0;
+}
+
+.HeaderRight > div > p {
+  font-size: small;
+  color: rgb(190, 190, 190);
+}
+
+.HeaderRight > button {
+  background-color: #b22222;
+  color: white;
+  border: none;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 9px;
+  margin-top: -5px;
+}
+
+.HeaderRight > button:hover {
+  background-color: #d12828;
+  cursor: pointer;
+}
+
+.HeaderRight > button:focus {
+  outline: none;
+}
+
+.BodyWindow
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: medium;
+  height: 100%;
+}
+
+.BodyWindowTop
+{
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  position: fixed;
+  font-size: medium;
+  height: 11%;
+  width: 84%;
+  top: 16%;
+  background-color: #192435;
+  color: white;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.75);
+}
+
+.BodyWindowTopLeft > button
+{
+  position: absolute;
+  top: 26%;
+  left: 2%;
+  padding: 7px 10px;
+  border-radius: 9px;
+  background-color: #0676ED;
+  color: white;
+  border: none;
+}
+
+.BodyWindowTopLeft > button:hover
+{
+  background-color: #0568d3;
+  cursor: pointer;
+}
+
+.BodyWindowTopLeft > button:focus
+{
+  outline: none;
+}
+
+.BodyWindowTopRight {
+  margin-top: 2.5vh;
+  margin-right: 1vw;
+  display: flex;
+  align-items: center;
+  background-color: #eceef0;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 999px;
+  float: right;
+}
+
+.BodyWindowTopRight > input
+{
+  border: none;
+  background-color: transparent;
+  outline-width: 0;
+}
+
+.BodyWindowTopRight > .MuiSvgIcon-root
+{
+  color: rgb(12, 12, 12);
+}
+
+.BodyWindowTopRightReport {
+  display: flex;
+  align-items: center;
+  float: right;
+  margin-top: -65px;
+}
+
+.BodyWindowTopRightReport > button
+{
+  width: 15vw;
+  padding: 7px 10px;
+  border-radius: 9px;
+  background-color: #0676ED;
+  color: white;
+  border: none;
+  margin-left: 5px;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+.BodyWindowTopRightReport > button:hover
+{
+  background-color: #0568d3;
+  cursor: pointer;
+}
+
+.BodyWindowTopRightReport > button:focus
+{
+  outline: none;
+}
+
+.BodyWindowTopLeftReport {
+  margin-top: 2.5vh;
+  margin-right: 1vw;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  background-color: #eceef0;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 999px;
+}
+
+.BodyWindowTopLeftReport > input
+{
+  width: 200px;
+  border: none;
+  background-color: transparent;
+  outline-width: 0;
+}
+
+.BodyWindowTopLeftReport > .MuiSvgIcon-root
+{
+  color: rgb(12, 12, 12);
+}
+
+.BodyWindowBottom
+{
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  font-size: medium;
+  position: fixed;
+  height: 82%;
+  width: 84%;
+  bottom: 1%;
+  background-color: #192435;
+  color: white;
+  border-radius: 100px;
+  box-shadow: 0px 0px 35px 5px rgba(0, 0, 0, 0.75);
+}
+
+.AppHeader {
+  position: fixed;
+  right: 0;
+  text-align: right;
+  height: 15%;
+  width: 85%;
+}
+
+.AppSidebar {
+  height: 100%;
+  width: 15%;
+  position: fixed;
+}
+
+.AppBody {
+  padding-top: 8%;
+  padding-left: 15.5%;
+  padding-right: 0.5%;
+  padding-bottom: 0.5%;
+  height: 100vh;
+  width: 100vw;
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-inputs {
+  margin-bottom: 0.5rem;
+  width: 80%;
+}
+
+.form-inputs span {
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+  color: #f00e0e;
+}
+
+.form-error {
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+.form-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  color: black;
+}
+
+.form-input {
+  display: block;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 2px;
+  height: 40px;
+  width: 100%;
+  border: none;
+  background-color: #a4a7aa;
+}
+
+.form-input::placeholder {
+  color: #595959;
+  font-size: 12px;
+}
+
+.form-input-btn {
+  /* width: 80%;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    rgb(39, 176, 255) 0%,
+    rgb(0, 232, 236) 100%
+  );
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem; */
+  margin-top: 20px;
+  padding: 10px 24px;
+  background: #2448a3;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+
+.form-input-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    rgb(39, 143, 255) 0%,
+    rgb(12, 99, 250) 100%
+  );
+  transition: all 0.4s ease-out;
+}
+
+.form-update {
+  background-color: #0676ED;
+  color: white;
+  border: none;
+  padding: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 9px;
+  box-shadow: inset;
+}
+
+.form-update:focus {
+  outline: none;
+}
+
+.form-update:hover {
+  background-color: #0568d3;
+  cursor: pointer;
+}
+
+.form-delete {
+  background-color: #d32323;
+  color: white;
+  border: none;
+  padding: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 9px;
+  box-shadow: inset;
+}
+
+.form-delete:focus {
+  outline: none;
+}
+
+.form-delete:hover {
+  background-color: #c22525;
+  cursor: pointer;
+}
+
+.deleteIcon > .MuiSvgIcon-root {
+  font-size: 110px;
+  color: red;
+}
+
+.confirmIcon > .MuiSvgIcon-root {
+  font-size: 110px;
+  color: green;
+}
+
+.radioLabel {
+  padding-left: 5px;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+.login-card {
+  padding: 30px;
+}
+
+.login-card-out {
+  margin-top: -9.5%;
+  margin-left: -18.45%;
+  height: 100vh;
+  width: 100vw;
+  background-color: #192435;
+  padding-left: 45%;
+  padding-top: 15%;
+  box-shadow: 0px 0px 35px 5px rgba(0, 0, 0, 0.75);
+}
+
+.login-error {
+  font-size: 0.7rem;
+  color: #f00e0e;
+}
+
+select {
+  padding: 5px;
+}
+
+.selectDelivery {
+  width: 80%;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.selectCrust {
+  width: 20%;
+  outline: none;
+}
+
+.selectTopping {
+  margin-left: 5px;
+  width: 20%;
+  outline: none;
+}
+
+.selectSize {
+  margin-left: 5px;
+  width: 20%;
+  outline: none;
+}
+
+.selectQuantity {
+  margin-left: 5px;
+  width: 8%;
+  text-align: center;
+  outline: none;
+}
+
+.form-item-remove-btn {
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #f15e5e;
+  padding: 5px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.form-item-remove-btn:hover {
+  background-color: #dc3545;
+  cursor: pointer;
+}
+
+.form-item-remove-btn:focus {
+  outline: none;
+}
+
+.form-item-add-btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #5ef196;
+  padding: 5px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.form-item-add-btn:hover {
+  background-color: #35dc43;
+  cursor: pointer;
+}
+
+.form-item-add-btn:focus {
+  outline: none;
+}
+
+.date-picker {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.divider {
+  display: inline-block;
+  width: 1px;
+  background-color: white;
+  height: 4em;
+  margin-right: 14px;
+  margin-top: 9px;
+}
+
+.logo {
+  width: 25%;
+}
+
+.UserDetails {
+  background-color: #192435;
+  position: absolute;
+  font-size: medium;
+  height: 83%;
+  width: 41.5%;
+  top: 15.7%;
+  left: 15.7%;
+  color: white;
+  box-shadow: 0px 0px 35px 5px rgba(0, 0, 0, 0.75);
+  padding-left: 1%;
+  padding-top: 1%;
+}
+
+.ChangePassword {
+  background-color: #192435;
+  position: absolute;
+  font-size: medium;
+  height: 83%;
+  width: 41.5%;
+  top: 15.7%;
+  left: 58%;
+  color: white;
+  box-shadow: 0px 0px 35px 5px rgba(0, 0, 0, 0.75);
+}
+
+.BlueButton
+{
+  /* position: absolute;
+  top: 26%;
+  left: 2%; */
+  margin-top: 20px;
+  padding: 7px 170px;
+  border-radius: 9px;
+  background-color: #0676ED;
+  color: white;
+  border: none;
+}
+
+.BlueButton:hover
+{
+  background-color: #0568d3;
+  cursor: pointer;
+}
+
+.BlueButton:focus
+{
+  outline: none;
+}
+
+.ProfileFormLabel {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  color: rgb(255, 255, 255);
+}
+
+.ProfileFormInput {
+  display: block;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 2px;
+  height: 40px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+}
+
+.ProfileFormInput:read-only {
+  background-color: #a4a7aa;
+}
